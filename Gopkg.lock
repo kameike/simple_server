@@ -8,6 +8,21 @@
   version = "v3.2.0"
 
 [[projects]]
+  name = "github.com/go-redis/redis"
+  packages = [
+    ".",
+    "internal",
+    "internal/consistenthash",
+    "internal/hashtag",
+    "internal/pool",
+    "internal/proto",
+    "internal/singleflight",
+    "internal/util"
+  ]
+  revision = "877867d2845fbaf86798befe410b6ceb6f5c29a3"
+  version = "v6.10.2"
+
+[[projects]]
   name = "github.com/labstack/echo"
   packages = [
     ".",
@@ -69,6 +84,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "91e30354296cd906601e6a0f51bf06f49e5ed641ff83e1650db6b1c8537351d5"
+  inputs-digest = "393ca4946bcd01ad1b802806e8aada84515a1c6c790c70c3be2b68394447a23f"
   solver-name = "gps-cdcl"
   solver-version = 1
