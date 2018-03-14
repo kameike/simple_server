@@ -1,11 +1,10 @@
 package main
 
 import (
-	"net/http"
-	"strconv"
-
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	"net/http"
+	"strconv"
 )
 
 func main() {

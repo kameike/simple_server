@@ -4,8 +4,8 @@
 [[projects]]
   name = "github.com/dgrijalva/jwt-go"
   packages = ["."]
-  revision = "dbeaa9332f19a944acb5736b4456cfcc02140e29"
-  version = "v3.1.0"
+  revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
+  version = "v3.2.0"
 
 [[projects]]
   name = "github.com/labstack/echo"
@@ -13,8 +13,8 @@
     ".",
     "middleware"
   ]
-  revision = "b338075a0fc6e1a0683dbf03d09b4957a289e26f"
-  version = "3.2.6"
+  revision = "27b5253bfd53caad64fb5d2a49ec724ff5558451"
+  version = "3.3.0"
 
 [[projects]]
   name = "github.com/labstack/gommon"
@@ -24,8 +24,8 @@
     "log",
     "random"
   ]
-  revision = "57409ada9da0f2afad6664c49502f8c50fbd8476"
-  version = "0.2.3"
+  revision = "6fe1405d73ec4bd4cd8a4ac8e2a2b2bf95d03954"
+  version = "0.2.4"
 
 [[projects]]
   name = "github.com/mattn/go-colorable"
@@ -58,13 +58,13 @@
     "acme",
     "acme/autocert"
   ]
-  revision = "650f4a345ab4e5b245a3034b110ebc7299e68186"
+  revision = "182114d582623c1caa54f73de9c7224e23a48487"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "37707fdb30a5b38865cfb95e5aab41707daec7fd"
+  revision = "8c0ece68c28377f4c326d85b94f8df0dace46f80"
 
 [solve-meta]
   analyzer-name = "dep"
