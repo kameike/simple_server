@@ -8,7 +8,10 @@ services:
     networks:
       - appnet
     environment:
+      - MYSQL_PASSWORD=password
       - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=user
   redis:
     image: redis:alpine
     networks:
@@ -33,7 +36,7 @@ services:
       - DB_HOST=db
       - DB_PORT=3306
       - DB_PASSWORD=password
-      - DB_NAME=mysql
-      - DB_USERNAME=root
+      - DB_NAME=database
+      - DB_USERNAME=user
 networks:
   appnet:
