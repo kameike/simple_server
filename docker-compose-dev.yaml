@@ -9,7 +9,6 @@ services:
       - appnet
     environment:
       - MYSQL_PASSWORD=password
-      - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=database
       - MYSQL_USER=user
   redis:
@@ -23,6 +22,9 @@ services:
     ports:
       - 8080:3000
     links:
+      - db
+      - redis
+    depends_on:
       - db
       - redis
     networks:

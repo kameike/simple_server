@@ -87,9 +87,15 @@
   packages = ["unix"]
   revision = "8c0ece68c28377f4c326d85b94f8df0dace46f80"
 
+[[projects]]
+  name = "gopkg.in/gorp.v1"
+  packages = ["."]
+  revision = "c87af80f3cc5036b55b83d77171e156791085e2e"
+  version = "v1.7.1"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "32f394bfccca9bbdb7f3e083ec4ff788c9a77f5d9d0183bd9acc42994612c601"
+  inputs-digest = "ae15cbb75c03cd20dedbae7e8c6e89d53c80106c7a4f4f3b3ab1a1864282ce69"
   solver-name = "gps-cdcl"
   solver-version = 1
