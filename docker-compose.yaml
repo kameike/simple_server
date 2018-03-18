@@ -6,19 +6,20 @@ services:
     ports:
       - 3306:3306
     networks:
-      - appnet
+      - internal_net
     environment:
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=database
       - MYSQL_USER=user
+      - MYSQL_ROOT_PASSWORD=random_hash_with_nice_something
   redis:
     image: redis:alpine
     networks:
-      - appnet
+      - internal_net
     ports:
       - 6379:6379
   app:
-    build: .
+    image: kameike/simple_server:9923ea6559274962fcfdd361f7ec6cbdb456a8dd 
     ports:
       - 8080:3000
     links:
@@ -29,6 +30,7 @@ services:
       - redis
     networks:
       - appnet
+      - internal_net
     volumes:
       - $PWD:/usr/src/app
     environment:
@@ -42,3 +44,5 @@ services:
       - DB_USERNAME=user
 networks:
   appnet:
+  internal_net:
+    internal: true
