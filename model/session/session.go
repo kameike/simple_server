@@ -6,10 +6,10 @@ import (
 
 type Session string
 
-func Create(u user.User) Session {
-	u.Name
+func Create(_u user.User) Session {
 	return "hashLw"
 }
 
-func (session Session) Check() bool {
+func (_session Session) Check() bool {
+	return false
 }

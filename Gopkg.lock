@@ -34,8 +34,8 @@
     ".",
     "middleware"
   ]
-  revision = "27b5253bfd53caad64fb5d2a49ec724ff5558451"
-  version = "3.3.0"
+  revision = "a5d81b8d4a627f3f49dcb3164ef2bb5239682227"
+  version = "3.3.4"
 
 [[projects]]
   name = "github.com/labstack/gommon"
@@ -79,13 +79,13 @@
     "acme",
     "acme/autocert"
   ]
-  revision = "182114d582623c1caa54f73de9c7224e23a48487"
+  revision = "12892e8c234f4fe6f6803f052061de9057903bb2"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "8c0ece68c28377f4c326d85b94f8df0dace46f80"
+  revision = "378d26f46672a356c46195c28f61bdb4c0a781dd"
 
 [[projects]]
   name = "gopkg.in/gorp.v1"
