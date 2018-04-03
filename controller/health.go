@@ -44,6 +44,8 @@ func RenderHealth(c echo.Context) error {
 	// mysql helth check
 	fmt.Fprintln(buf, "[mysql state]")
 	var db, _ = sql.Open("mysql", constants.DbTarget())
+	defer db.Close()
+
 	err = db.Ping()
 	if err != nil {
 		fmt.Fprintf(buf, "error => %s\n", err)

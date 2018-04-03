@@ -8,9 +8,14 @@ import (
 	"gopkg.in/gorp.v1"
 )
 
+var db *sql.DB
+
 func DbMap() *gorp.DbMap {
-	db, err := sql.Open("mysql", constants.DbTarget())
-	util.CheckError(err, "sql.Open failed")
+	if db.Stats().OpenConnections < 3 {
+		var err error
+		db, err = sql.Open("mysql", constants.DbTarget())
+		util.CheckError(err, "sql.Open failed")
+	}
 
 	return &gorp.DbMap{Db: db, Dialect: gorp.MySQLDialect{"MyISAM", "UTF8"}}
 }
