@@ -4,10 +4,8 @@ FROM golang:1.10.0 AS build-env
 RUN go get -u github.com/golang/dep/cmd/dep
 
 WORKDIR /go/src/github.com/kameike/simple_server
-
 COPY Gopkg.lock Gopkg.toml ./
 RUN dep ensure -v -vendor-only
-
 COPY . .
 
 ENV CGO_ENABLED=0

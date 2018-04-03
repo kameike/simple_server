@@ -19,7 +19,7 @@ services:
     ports:
       - 6379:6379
   app:
-    image: kameike/simple_server
+    image: kameike/simple_server:latest
     ports:
       - 8080:3000
     links:
@@ -32,16 +32,16 @@ services:
       - appnet
       - internal_net
     volumes:
-      - $PWD:/usr/src/app
+      - $PWD/logs:/var/log/app
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-
       - DB_HOST=db
       - DB_PORT=3306
       - DB_PASSWORD=password
       - DB_NAME=database
       - DB_USERNAME=user
+      - ACCESS_LOG_FILE=/var/log/app/access.log
 networks:
   appnet:
   internal_net:
