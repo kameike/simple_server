@@ -25,7 +25,8 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// Routes
-	e.GET("/", controller.RenderHealth)
+	// e.GET("/", controller.RenderHealth)
+	e.GET("/", controller.RenderHello)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":3000"))

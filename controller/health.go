@@ -9,9 +9,22 @@ import (
 	"github.com/kameike/simple_server/util/constants"
 	"github.com/labstack/echo"
 	"net/http"
+	"os"
 )
 
 var time_count = 0
+
+const VERSION = "v1.0.0"
+
+func RenderHello(c echo.Context) error {
+	var buf = bytes.NewBufferString("")
+	fmt.Fprintf(buf, "hello, I am %s \n", VERSION)
+
+	name, _ := os.Hostname()
+	fmt.Fprintf(buf, "from %s", name)
+
+	return c.String(http.StatusOK, buf.String())
+}
 
 // Handler
 func RenderHealth(c echo.Context) error {
